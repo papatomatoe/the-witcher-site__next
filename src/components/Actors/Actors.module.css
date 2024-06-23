@@ -1,0 +1,197 @@
+.actors__container {
+	padding: 16px;
+}
+
+.container__box {
+	position: relative;
+}
+
+.actors__title {
+	padding-right: 65px;
+	font: var(--text--H2-mob);
+}
+
+.actors__buttons {
+	position: absolute;
+	top: 4px;
+	right: -5px;
+	display: flex;
+	gap: 12px;
+}
+
+.actors__button {
+	width: 28px;
+	height: 28px;
+	padding: 0;
+	margin: 0;
+	border: none;
+	background-color: transparent;
+	--color--icon: var(--color--red-82);
+}
+
+.actors__button svg {
+	width: 28px;
+	height: 28px;
+}
+
+.actors__button:hover,
+.actors__button:focus-visible {
+	--color--icon: var(--color--red-100);
+	filter: drop-shadow(0 0 4px rgba(250, 30, 30, 0.5));
+}
+
+.actors__button:active {
+	opacity: 0.7;
+}
+
+.actors__button:disabled {
+	--color--icon: var(--color--grey-36);
+	filter: none;
+	opacity: 1;
+	cursor: auto;
+}
+
+.embla {
+	overflow: hidden;
+	padding: 0 16px;
+}
+
+.actors__list {
+	display: flex;
+	gap: 24px;
+}
+
+.actor {
+	position: relative;
+	flex-shrink: 0;
+	width: 216px;
+}
+
+.actor__button {
+	display: block;
+	padding: 0;
+	margin: 0;
+	border: none;
+	background-color: transparent;
+}
+
+.actor__info {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+	color: var(--color--white);
+}
+
+.actor__name {
+	font: var(--text--H4-mob);
+}
+
+.actor__pers {
+	font: var(--text--H4b-mob);
+}
+
+.actor__desc {
+	display: none;
+	margin-top: auto;
+	font: var(--text--P-mob);
+}
+
+.actor__info__selected {
+	background: var(--linear-gradient--v-1);
+}
+
+.actor__info__selected .actor__desc {
+	text-align: start;
+	display: block;
+}
+
+@media (min-width: 720px) {
+	.actors__container {
+		padding: 64px 16px 32px;
+	}
+
+	.actors__title {
+		font: var(--text--H2-tab);
+		padding-right: 90px;
+		padding-bottom: 10px;
+	}
+
+	.actors__buttons {
+		gap: 24px;
+		top: 7px;
+		right: -8px;
+	}
+
+	.actors__button {
+		width: 32px;
+		height: 32px;
+	}
+
+	.actors__button svg {
+		width: 32px;
+		height: 32px;
+	}
+
+	.embla {
+		padding-left: calc(calc(100% - 640px) / 2);
+		padding-right: calc(calc(100% - 640px) / 2);
+	}
+
+	.actor {
+		width: 256px;
+	}
+
+	.actor__pers {
+		font: var(--text--H4b-tab);
+	}
+
+	.actor__name {
+		font: var(--text--H4-tab);
+	}
+
+	.actor__desc {
+		font: var(--text--P-tab);
+	}
+}
+
+@media (min-width: 1260px) {
+	.actors__container {
+		padding: 72px 16px 32px;
+	}
+
+	.actors__title {
+		font: var(--text--H2-desk);
+	}
+
+	.embla {
+		padding-left: calc(calc(100% - 1200px) / 2);
+		padding-right: calc(calc(100% - 1200px) / 2);
+	}
+
+	.actor {
+		width: 282px;
+	}
+
+	.actor__info {
+		padding: 24px 24px 32px;
+	}
+
+	.actor__pers {
+		font: var(--text--H4b-desk);
+	}
+
+	.actor__name {
+		font: var(--text--H4-desk);
+	}
+
+	.actor__desc {
+		font: var(--text--P-desk);
+	}
+}

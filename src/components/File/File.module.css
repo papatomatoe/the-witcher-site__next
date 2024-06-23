@@ -1,0 +1,60 @@
+.file {
+	position: relative;
+	width: 100%;
+	padding-bottom: 20px;
+}
+
+.file__container {
+	position: relative;
+	display: block;
+	padding: 16px 65px 16px 20px;
+	width: 100%;
+	height: 100%;
+	background-color: var(--color--grey-18);
+	color: var(--color--white);
+	font: var(--text--global);
+	cursor: pointer;
+}
+
+.file__container:has(.file__input:hover) {
+	background-color: var(--color--grey-20);
+}
+
+.file__container:has(.file__input:focus-visible) {
+	outline: 1px solid var(--color--white);
+}
+
+.file__placeholder {
+	color: var(--color--grey-51);
+	font: var(--text--global);
+}
+
+.file__icon {
+	position: absolute;
+	display: grid;
+	place-items: center;
+	top: 50%;
+	right: 20px;
+	--color--icon: var(--color--grey-51);
+	translate: 0 -50%;
+}
+
+.file__error {
+	position: absolute;
+	top: calc(100% - 15px);
+	left: 0;
+}
+
+.fileWithError .file__container {
+	background-color: var(--color--red-35);
+}
+.fileWithError .file__placeholder {
+	color: var(--color--red-9);
+}
+.fileWithError .file__icon {
+	--color--icon: var(--color--red-9);
+}
+
+.fileWithError .file__container:has(.file__input:hover) {
+	background-color: var(--color--red-35);
+}
